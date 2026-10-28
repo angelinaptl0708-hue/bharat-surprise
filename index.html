@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Shona Bacha 💗</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", cursive, sans-serif;
+    background: #fff3f7;
+    color: #714052;
+    overflow-x: hidden;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #f29bb9;
+    pointer-events: none;
+    animation: floatUp 8s linear infinite;
+    z-index: 0;
+    opacity: 0.65;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% { opacity: 0.7; }
+    to {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    width: min(92%, 680px);
+    margin: 35px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    background: rgba(255,255,255,0.88);
+    border: 1px solid #f7d3df;
+    border-radius: 26px;
+    padding: 30px 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 12px 35px rgba(192, 99, 133, 0.10);
+    text-align: center;
+    animation: appear 1s ease both;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.small {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c17c98;
+}
+
+h1 {
+    font-size: clamp(30px, 7vw, 45px);
+    line-height: 1.2;
+    color: #d76d96;
+    margin: 18px 0;
+}
+
+h2 {
+    color: #ce7195;
+}
+
+p {
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 13px 23px;
+    background: #e88cad;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 8px 4px;
+    box-shadow: 0 5px 15px #e88cad35;
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.03);
+    background: #d76d96;
+}
+
+.soft {
+    background: #fff0f5;
+    color: #bd6688;
+    border: 1px solid #f5cada;
+    box-shadow: none;
+}
+
+.letter {
+    text-align: left;
+    background: #fffafc;
+    border: 1px dashed #e8a5bd;
+    border-radius: 19px;
+    padding: 22px 18px;
+    margin-top: 20px;
+    line-height: 2;
+    font-size: 16px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.letter p {
+    margin: 0 0 16px;
+}
+
+.signature {
+    text-align: right;
+    color: #cf7096;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.hidden {
+    display: none;
+}
+
+.tag {
+    display: inline-block;
+    margin: 5px;
+    background: #fff0f5;
+    border: 1px solid #f4d2df;
+    border-radius: 20px;
+    padding: 9px 12px;
+    font-size: 13px;
+    color: #bd6688;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px 0 35px;
+    font-size: 13px;
+    color: #b77d93;
+}
+
+#letterSection {
+    scroll-margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-top: 18px;
+    }
+
+    .card {
+        padding: 25px 17px;
+    }
+
+    .letter {
+        padding: 18px 14px;
+        font-size: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <section class="card">
+        <div class="small">a little something from me to you</div>
+
+        <h1>Hellu, mera shona bacha 🥹💗</h1>
+
+        <p>
+            Accha suno naaa, mere pyaare se paglu...
+            idhar aao thodaaa. 🫶🏻
+        </p>
+
+        <p>
+            Pata hai tum thode naraz ho,
+            but tumhe aise chup-chup sa dekhna
+            bilkul achha nahi lagta mujhe.
+        </p>
+
+        <p>
+            Isliye socha sirf sorry bolne se achha,
+            apne bache ke liye kuch pyaara sa bana du.
+            Bilkul apne haathon se... well, almost. Hehe. 🎀
+        </p>
+
+        <button onclick="openLetter()">
+            Read my little letter 💌
+        </button>
+
+        <button class="soft" onclick="makeHearts()">
+            Smile for me, please? 🥺
+        </button>
+    </section>
+
+    <section class="card">
+        <h2>Ek baat bolun, paglu? 🌷</h2>
+
+        <p>
+            Tum mere liye sirf koi person nahi ho
+            jisse main baat karti hoon.
+            Tum woh ho jiske saath main apni chhoti-chhoti
+            baatein share karna chahti hoon,
+            jisko tang karna hai, jiske saath hasna hai,
+            aur jisko apna din batana hai.
+        </p>
+
+        <p>
+            Aur haan, tumhara mood off ho toh
+            main tumhe aur zyada pyaar se manaungi.
+            Itna toh banta hai na mera? Hehe. 🥹
+        </p>
+
+        <div class="tag">my shona bacha</div>
+        <div class="tag">mera paglu</div>
+        <div class="tag">my favourite human</div>
+    </section>
+
+    <section class="card hidden" id="letterSection">
+        <div class="small">read this slowly, jaanu</div>
+        <h2>Ek letter sirf tumhare liye 💗</h2>
+
+        <div class="letter" id="loveLetter">
+
+            <p>Helo mera shona bachaaa, 🥹💗</p>
+
+            <p>
+                Naraz hoo haan? Ruthe hue ho mere bache?
+                Achhe nahi lagte aise bilkul bhi.
+                Chalo ab thoda sa smile kroooo,
+                pleaseee mere liye. 🥺🎀
+            </p>
+
+            <p>
+                Sorry jaanuuu, agar meri kisi baat se
+                tumhe bura laga ya tumhara mood off ho gaya.
+                Mera intention kabhi bhi tumhe aisa feel
+                karwane ka nahi hota, paglu.
+                Kabhi kabhi main bhi silly si ho jaati hoon,
+                but iska matlab ye thodi hai ki tum mere liye
+                kam important ho jaate ho.
+            </p>
+
+            <p>
+                Me bus teriii hoon, teri thi aur teri hi
+                rhungiiii!! Humeshaaaa. 😭💗
+                Aur suno, tum mere pyaare se bachaa ho
+                aur humesha rahoge.
+                Mera wohi cute sa paglu jisko tang karna,
+                manana aur pyaar karna mujhe kabhi boring
+                nahi lagegaaa.
+            </p>
+
+            <p>
+                Mujhe pata hai kabhi kabhi insecurity hoti hai,
+                aur main tumhari feelings ko lightly nahi lena
+                chahti. Main chahti hoon tum mujhse apni baat
+                bolo, main tumhari baat sunu, aur hum dono
+                ek dusre ko samjhein. Tumhe mere saath
+                safe aur loved feel hona chahiye, jaan.
+            </p>
+
+            <p>
+                Main har baar perfect nahi houngi,
+                tum bhi nahi hoge, but hum ek dusre ke liye
+                better ban sakte hain na?
+                Gusse mein chup rehne se achha hai baat kar
+                lena, aur narazgi mein bhi ek dusre ko
+                pyaar se samajhna. 🫶🏻
+            </p>
+
+            <p>
+                Aur ab bas bhi karooo,
+                kitna bhaav khaoge mere seee? 😭
+                Idhar aao, ek pyaari si smile do,
+                aur yaad rakho ki meri life mein tumhari
+                apni ek special jagah hai.
+            </p>
+
+            <p>
+                #BHARAT PAGLU FOR LIFE 💌<br>
+                #LINA ONLY BHARAT KI 🎀<br>
+                #LINA WEDS BHARAT 🤍
+            </p>
+
+            <p>
+                I loveee youuu, Bharat mataiii. 😭💗
+                Tu mera pyaara sa bachaa haiii
+                aur humesha rahogeee.
+                Ab please apna mood thoda theek kar lo,
+                meri jaan. Tumhari smile bohot pyaari hai.
+            </p>
+
+            <p class="signature">
+                Humesha tumhari,<br>
+                your lina 💗
+            </p>
+
+        </div>
+
+        <button onclick="scrollLetter()">
+            Read till the end 💌
+        </button>
+
+        <button class="soft" onclick="makeHearts()">
+            Okay ab smile karo 🥹
+        </button>
+    </section>
+
+    <section class="card">
+        <h2>One last thing, shona 💗</h2>
+
+        <p>
+            Main ye sab isliye nahi bana rahi ki
+            tum bas naraz hona band kar do.
+            Main bana rahi hoon kyunki tum mere ho,
+            tumhari feelings matter karti hain,
+            aur main chahti hoon tumhe kabhi kabhi
+            extra pyaar se yaad dilati rahun
+            ki you're important to me.
+        </p>
+
+        <p>Ab ek smile toh banti hai naaa? 🥹🫶🏻</p>
+
+        <button onclick="openLetter()">
+            One more time, read my letter 💌
+        </button>
+    </section>
+
+    <div class="footer">
+        made with lots and lots of pyaar, by your lina 🎀
+    </div>
+
+</div>
+
+<script>
+function openLetter() {
+    const section = document.getElementById("letterSection");
+
+    section.classList.remove("hidden");
+
+    setTimeout(function () {
+        section.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }, 150);
+}
+
+function scrollLetter() {
+    const letter = document.getElementById("loveLetter");
+
+    letter.scrollIntoView({
+        behavior: "smooth",
+        block: "end"
+    });
+}
+
+function makeHearts() {
+    for (let i = 0; i < 16; i++) {
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+        heart.textContent = ["💗", "💕", "♡", "🎀"][i % 4];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (16 + Math.random() * 20) + "px";
+        heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(function () {
+            heart.remove();
+        }, 7500);
+    }
+}
+
+function createBackgroundHearts() {
+    for (let i = 0; i < 9; i++) {
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+        heart.textContent = "♡";
+        heart.style.left = (i * 12) + "%";
+        heart.style.animationDelay = (i * 0.8) + "s";
+        heart.style.animationDuration = (7 + i % 4) + "s";
+
+        document.body.appendChild(heart);
+    }
+}
+
+createBackgroundHearts();
+</script>
+
+</body>
+</html>
